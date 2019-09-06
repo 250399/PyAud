@@ -65,8 +65,7 @@ def get_video_type(filename):
     return VIDEO_TYPE['avi']
 
 def aud():
-    time.sleep(5)
-    while True:
+    while cap.read():
         for i in range(0,int(44100/1024*5)):
             data = stream.read(1024)
             aframes.append(data)
